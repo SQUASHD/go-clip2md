@@ -52,6 +52,6 @@ func Execute() {
 }
 
 func init() {
-	rootCmd.PersistentFlags().StringP("lang", "l", "go", "Language to use for syntax highlighting")
+	rootCmd.PersistentFlags().StringP("lang", "l", "", "Language to use for syntax highlighting")
 	rootCmd.PersistentFlags().StringP("domain", "d", "", "Domain to use for relative links, e.g. https://en.wikipedia.org")
 }
