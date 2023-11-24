@@ -77,4 +77,4 @@ This project uses the following open-source libraries:
 - [goquery](https://github.com/PuerkitoBio/goquery) - Licensed under BSD 3-Clause License. [View License](./LICENSE/goquery).
 - [html-to-markdown](https://github.com/JohannesKaufmann/html-to-markdown) - Licensed under MIT License. [View License](./LICENSE/html-to-markdown).
 - [clipboard](https://github.com/atotto/clipboard) - Licensed under BSD 3-Clause License. [View License](./LICENSE/clipboard).
-
+- [cobra](https://github.com/spf13/cobra) - Licensed under Apache License 2.0. [View License](./LICENSE/cobra).
