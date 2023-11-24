@@ -1,9 +1,7 @@
 # go-clip2md
 
 `go-clip2md` is a CLI tool that seamlessly converts HTML content from your
-clipboard into Markdown format. Whether you're collecting online documentation,
-preparing rich text previews for Obsidian, or organizing your digital notes,
-`go-clip2md` streamlines the process, making it effortless to gather and format information.
+clipboard into Markdown format. Especially useful for anyone who used Obsidian.
 
 ## Features
 
@@ -31,7 +29,7 @@ other sources is typically subject to copyright law.
 Install `go-clip2md` using Go:
 
 ```bash
-go install github.com/SQUASHD/go-clip2mdlatest
+go install github.com/SQUASHD/go-clip2md@latest
 ```
 
 This command handles all dependencies and creates a binary for your operating system.
