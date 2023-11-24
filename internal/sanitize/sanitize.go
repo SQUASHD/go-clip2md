@@ -5,10 +5,9 @@ import (
 	"strings"
 )
 
+// SanitizeCellContent sanitizes the content of a table cell
+// because the html-to-markdown library copies cell content verbatim, we need to escape any markdown characters
 func SanitizeCellContent(cellContent string) string {
-	// Example sanitization logic:
-	// If the asterisk is surrounded by spaces, it's more likely to be a formatting character
-	// You can extend this logic based on your specific use case
 	cellContent = strings.ReplaceAll(cellContent, "*", "\\*")
 	cellContent = strings.ReplaceAll(cellContent, "[", "\\[")
 	cellContent = strings.ReplaceAll(cellContent, "]", "\\]")

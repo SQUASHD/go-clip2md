@@ -1,3 +1,5 @@
+// package postprocess deals mostly with escaping special characters in markdown
+// but also removing extra newlines and other formatting
 package postprocess
 
 import (
@@ -35,6 +37,8 @@ func PostProcessMarkdown(markdown, flag string) string {
 	return markdown
 }
 
+// escapeSpecialCharsInMarkdown escapes < and > characters in markdown
+// this is mostly for obsidian which uses these characters for scripting
 func escapeSpecialCharsInMarkdown(input string) string {
 	lines := strings.Split(input, "\n")
 	for i, line := range lines {

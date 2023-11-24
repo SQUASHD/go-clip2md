@@ -19,12 +19,14 @@ func ConvertHTML2Md(domain, content string) (string, error) {
 
 				selection.Find("tr").Each(func(i int, s *goquery.Selection) {
 					s.Find("th, td").Each(func(j int, ss *goquery.Selection) {
+						// the html-to-markdown library copies cell content verbatim, we need to escape any markdown characters
 						cellContent := sanitize.SanitizeCellContent(strings.TrimSpace(ss.Text()))
 						markdownTable.WriteString("| ")
 						markdownTable.WriteString(cellContent)
 					})
 					markdownTable.WriteString(" |\n")
 
+					// tables were not being renderered correctly
 					if isFirstRow {
 						s.Find("th, td").Each(func(j int, ss *goquery.Selection) {
 							markdownTable.WriteString("|-")
